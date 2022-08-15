@@ -25,6 +25,7 @@ body {
   top: 0;
   opacity: 0.5 !important;
   transition: 3s linear all !important;
+  z-index: 0 !important;
 }
 
 svg .s0 {
