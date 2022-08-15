@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.glow_blue{
+    position: relative;
+    &:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 110%;
+        background-image: linear-gradient(to right, #081235, #011549, #00175e, #001872, #001686, #001686, #001686, #001686, #001872, #00175e, #011549, #081235);
+        border-radius: 165px;
+        top: 0;
+        opacity: 0.65;
+    }
+    // background-image: radial-gradient(#071297, #0A154D, #070C1A);
+}
+
+
+#section_one{
+    height: 700px;
+    background-image: url(/legion-banner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    header.header {
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        .logo{
+            max-width: 200px;
+            img{
+                width: 100%;
+            }
+        }
+        .nav {
+            text-align: center;
+                ul{
+                list-style-type: none;
+                li{
+                    display: inline-block;
+                    a{
+                        color:#fff;
+                        font-size: 22px;
+                        text-decoration: none !important;
+                        padding: 0 10px; 
+                    }
+                }
+            }
+        }
+        .social_icons ul{
+            list-style-type: none;
+            li{
+                display: inline-block;
+                a{
+                    text-decoration: none !important;
+                    padding: 0 5px;
+                    img{
+                        max-width: 23px;
+                    }
+                }
+                &:last-child{
+                    a{
+                        img{
+                            max-width: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main__heading_container{
+        margin-top: 150px;
+        h1{
+            color: #fff;
+            font-size: 55px;
+            text-align: center;
+            font-weight: 600;
+            max-width: 80%;
+            margin: 0 auto;
+            span{
+                font-weight: 700;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 40px;
+                    height: 8px;
+                    background: #2330FF;
+                    top: 50%;
+                    transform: translatey(-50%) rotate(-20deg);
+                }
+            }
+        }
+        a{
+            color: #56BBFD;
+            text-decoration: none;
+            margin-top: 220px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            span{
+                box-shadow: 0px 0px 10px 8px rgba(15,23,138,0.75);
+                border-radius: 10px;
+                background-color: #1A00FB;
+                padding: 10px 25px;
+            }
+        }
+    }
+}
+
+
+.remaining_body{
+    background-image: url(/mainbg.png);
+    height: 3000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section_two{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .section_two_content {
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        h2{
+            background: #CAB82A;
+            font-size: 45px;
+            text-transform: uppercase;
+            padding-bottom: 50px;
+            background: linear-gradient(to bottom, #CAB82A 0%, #A58D1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p{
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+            small{
+                font-size: 22px;
+                margin-top: 40px;
+                display: inline-block;
+            }
+        }
+    }
+    .section_two_arrow {
+        text-align: center;
+        position: absolute;
+        left: 40%;
+        transform: translatex(-60%);
+        margin-top: 70px;
+        .s0 { fill: none;stroke: #FFFFFF;stroke-linecap: round;stroke-width: 12 } 
+    }
+}
+
+#section_three{
+    padding-top: 80px;
+    padding-bottom: 0px;
+    .section_three_content {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        position: relative;
+        z-index: 2;
+        h2{
+            background: #CAB82A;
+            font-size: 45px;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+            background: linear-gradient(to bottom, #CAB82A 0%, #A58D1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.first{
+            font-size: 26px;
+            max-width: 500px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        p.second{
+            font-size: 20px;
+            max-width: 500px;
+            color: #fff;
+            margin: 25px 0 0 0;
+            span{
+                display: block;
+                font-size: 24px;
+                margin: 25px 0 0 0;
+            }
+        }
+    }
+    .section_three_arrow_one {
+        text-align: center;
+        position: absolute;
+        left: 33%;
+        transform: translatex(-50%);
+        margin-top: -15px;
+        svg{
+            transform: scale(1.2);
+        }
+        .s0 { fill: none;stroke: #FFFFFF;stroke-linecap: round;stroke-width: 12 } 
+    }
+    .third{
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 80px;
+        color: #fff;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 45px;
+        gap: 150px;
+        .content {
+            min-height: 280px;
+        }
+        .content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .content p {
+            font-size: 18px;
+            color: #a3a3a3;
+            line-height: 28px;
+        }
+    }
+    .section_three_arrow_two_one {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-75%);
+        .s0 { fill: none;stroke: #FFFFFF;stroke-linecap: round;stroke-width: 12 } 
+    }
+}
