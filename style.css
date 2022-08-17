@@ -150,6 +150,7 @@ section:after {
   background-repeat: no-repeat;
   padding-bottom: 100px;
   background-position: top center;
+  background-attachment: fixed;
 }
 
 #section_two {

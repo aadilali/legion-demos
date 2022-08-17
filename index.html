@@ -88,7 +88,7 @@
     </section>
 
     <div class="remaining_body">
-        <section class="section_two" id="section_two">
+        <section class="section_two circle" id="section_two">
             <div class="container">
                 <div class="section_two_content">
                     <h2 class="heading">
@@ -108,7 +108,7 @@
             <div id="section_two_stop_glow"></div>
         </section>
 
-        <section class="section_three" id="section_three">
+        <section class="section_three circle" id="section_three">
             <div class="container">
                 <div class="section_three_content">
                     <h2 class="heading">
@@ -176,7 +176,7 @@
             </div>
         </section>
 
-        <section class="section_four" id="section_four">
+        <section class="section_four circle" id="section_four">
             <div class="container">
                 <div class="section_four_content">
                     <h2 class="heading">
@@ -248,7 +248,7 @@
             </div>
         </section>
 
-        <section class="section_five" id="section_five">
+        <section class="section_five circle" id="section_five">
             <div class="container">
                 <div class="section_five_content">
                     <h2 class="heading">
@@ -267,7 +267,7 @@
             </div>
         </section>
 
-        <section class="section_six" id="section_six">
+        <section class="section_six circle" id="section_six">
             <div class="container">
                 <div class="section_six_content">
                     <h2 class="heading">
@@ -482,5 +482,54 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+<script type="application/javascript">
+
+    window.onload = function () {
+      lax.init()
+
+      lax.addDriver('scrollY', function () {
+        return window.scrollY
+      })
+
+      const container = document.querySelector('.remaining_body')
+      const count = 100
+
+     /* for (let i = 0; i < count; i++) {
+        const el = document.createElement('div')
+        el.className = "circle"
+        container.appendChild(el)
+      } */
+
+      lax.addElements(".circle", {
+        scrollY: {
+          translateX: [
+            ["elInY", "elCenterY", "elOutY"],
+            [-600, 'screenWidth/4', 'screenWidth'],
+            {
+              easing: 'easeInOutQuart',
+            }
+          ],
+          opacity: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, 1, 0],
+            {
+              easing: 'easeInOutCubic'
+            }
+          ],
+          "box-shadow": [
+            ["elInY+200", "elCenterY", "elOutY-200"],
+            [50, 0, 50],
+            {
+              easing: 'easeInOutQuint',
+              cssFn: (val) => {
+                return `${val}px ${val}px ${val}px rgba(0,0,0,0.5)`
+              }
+            }
+          ],
+        }
+      })
+    }
+  </script>
 <script src="script.js"></script>
 </html>
